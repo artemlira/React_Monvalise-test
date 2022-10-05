@@ -1,0 +1,25 @@
+@use 'var.scss' as v;
+@import-normalize;
+@import '../fonts/fonts.scss';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  width: 100vw;
+}
+
+body {
+  font-family: 'Stolzl';
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1350px;
+  padding: 0 15px;
+}
