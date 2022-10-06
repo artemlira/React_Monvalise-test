@@ -6,8 +6,6 @@
   margin-bottom: f.vw(32);
 }
 
-.header__container {}
-
 .header__title {
   background-color: rgba(203, 220, 255, 1);
 }
@@ -20,9 +18,6 @@
   color: rgba(15, 26, 52, 1);
 }
 
-
-.title__img {}
-
 .dress {
   width: f.vw(24);
   height: f.vw(24);
@@ -33,8 +28,6 @@
   height: f.vw(33);
   transform: rotate(-30deg);
 }
-
-.title__text {}
 
 .header__main {
   display: flex;
@@ -52,8 +45,6 @@
     height: 100%;
   }
 }
-
-.logo {}
 
 .header__form {
   margin-right: f.vw(24);
@@ -78,6 +69,10 @@
   padding: f.vw(10) f.vw(40);
   border: 1.6px solid #E0E3E3;
   border-radius: 4px;
+
+  @include m.tablet {
+    width: f.vw(300);
+  }
 }
 
 .form__button {
@@ -177,11 +172,13 @@
   justify-content: center;
   align-items: center;
   gap: f.vw(8);
+  position: relative;
 }
 
 .vector {
   width: f.vw(12);
   height: f.vw(12);
+  cursor: pointer;
 
   img {
     width: 100%;
@@ -189,12 +186,8 @@
   }
 }
 
-
-.header__nav {}
-
 .nav__list {
   display: flex;
-
 }
 
 .nav__item {

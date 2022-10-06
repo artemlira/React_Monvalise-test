@@ -2,7 +2,9 @@ import React from 'react';
 import { header } from './imagesDB';
 import '../style/header.scss';
 
+
 export default function Header() {
+
   return (
     <header className='header'>
       <div className='header__title'>
@@ -66,6 +68,6 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-    </header>
+    </header >
   )
 }

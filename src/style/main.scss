@@ -1,0 +1,156 @@
+@use 'variables.scss' as v;
+@use 'mixins.scss' as m;
+@use 'functions.scss' as f;
+
+.main__header {
+  height: f.vw(58);
+  display: flex;
+  align-items: flex-start;
+
+  p,
+  span {
+    font-size: f.vw(12);
+    line-height: 150%;
+    color: #2D3132;
+  }
+
+  span {
+    color: #747778;
+  }
+}
+
+.main__title {
+  height: f.vw(42);
+  margin-bottom: f.vw(32);
+
+  h2 {
+    font-size: f.vw(28);
+    font-weight: 400;
+    line-height: 150%;
+    color: #2D3132;
+  }
+}
+
+.main__sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sort__title {
+  font-weight: 400;
+  font-size: f.vw(22);
+  line-height: 150%;
+  color: #5C5F60;
+}
+
+.sort__list {
+  height: f.vw(34);
+  display: flex;
+  align-items: center;
+  gap: f.vw(12);
+  margin-bottom: f.vw(24);
+
+  p {
+    font-weight: 400;
+    font-size: f.vw(12);
+    line-height: 150%;
+    color: #5C5F60;
+  }
+
+  select {
+    background-color: #EFF1F1;
+    padding: f.vw(8) f.vw(21) f.vw(8) f.vw(12);
+    border: none;
+    border-radius: f.vw(25) f.vw(25) f.vw(25) f.vw(25);
+  }
+
+  & select:focus {
+    border: none;
+    outline: none;
+  }
+
+  & select::-ms-expand {
+    display: none;
+  }
+
+  option {
+    color: #2D3132;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: f.vw(3);
+    height: 122%;
+    background-color: #fff;
+    position: relative;
+    top: 0;
+    right: f.vw(35);
+  }
+}
+
+.main__body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: f.vw(24);
+}
+
+.body__filters {
+  border: 1px solid red;
+}
+
+.body__products {
+  border: 1px solid green;
+}
+
+details {
+  width: f.vw(312);
+  min-height: f.vw(53);
+  background-color: #EFF1F1;
+  border: 1px solid #EFF1F1;
+  position: relative;
+
+  summary {
+    display: flex;
+    font-weight: 400;
+    font-size: f.vw(14);
+    line-height: 150%;
+    color: #444748;
+    margin-top: f.vw(16);
+  }
+
+
+  img {
+    margin-top: 15px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    // align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+    background-color: #fff;
+  }
+}
+
+details summary:after {
+  content: url(../images/main/s-bottom.svg);
+  position: absolute;
+  right: f.vw(16);
+}
+
+details[open] summary:after {
+  content: url(../images/main/s-bottom.svg);
+  position: absolute;
+  right: f.vw(16);
+  top: f.vw(7);
+  transform: rotate(-180deg);
+}
+
+
+details:not(:last-child) {
+  margin-bottom: 2px;
+}

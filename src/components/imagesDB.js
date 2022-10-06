@@ -10,7 +10,7 @@ export const header = [
   '../images/header/Vector 2 (Stroke).svg'
 ]
 
-export const main = [
+export const mainProducts = [
   '../images/main/1.svg',
   '../images/main/2.svg',
   '../images/main/3.svg',
@@ -20,4 +20,17 @@ export const main = [
   '../images/main/7.svg',
   '../images/main/8.svg',
   '../images/main/9.svg',
+]
+
+export const main = [
+  '../images/main/PriceSlider.svg',
+  '../images/main/Subtract.svg',
+  '../images/main/alex.svg',
+  '../images/main/brandear.svg',
+  '../images/main/deevaSofia.svg',
+  '../images/main/forMan.svg',
+  '../images/main/heart.svg',
+  '../images/main/loveBrand.svg',
+  '../images/main/sellBuy.svg',
+  '../images/main/s-bottom.svg'
 ]
