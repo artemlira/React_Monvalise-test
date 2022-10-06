@@ -7,6 +7,7 @@ export const header = [
   '../images/header/message.svg',
   '../images/header/search.svg',
   '../images/header/vector.svg',
+  '../images/header/Vector 2 (Stroke).svg'
 ]
 
 export const main = [

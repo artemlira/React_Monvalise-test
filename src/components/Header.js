@@ -23,24 +23,46 @@ export default function Header() {
               type='text'
               placeholder='Знайти речі або бренди' />
             <button className='form__button'>Додати товар</button>
+            <div className='dropdown'>
+              <select name="target">
+                <option selected>Укр</option>
+                <option>Рус</option>
+                <option>Eng</option>
+              </select>
+            </div>
           </form>
           <div className='menu'>
-            <div className='dropdown'>
-
-            </div>
             <div className='icons'>
-              <img src={header[1]} alt='core' />
-              <img src={header[5]} alt='message' />
-              <img src={header[7]} alt='trash' />
+              <div className='core'>
+                <img src={header[1]} alt='core' />
+              </div>
+              <div className='message'>
+                <img src={header[5]} alt='message' />
+              </div>
+              <div className='trash'>
+                <img src={header[7]} alt='trash' />
+              </div>
             </div>
             <div className='profile'>
               <img src={header[0]} alt='avatar' />
+              <div className='vector'>
+                <img src={header[8]} alt='vector' />
+              </div>
             </div>
           </div>
         </div>
         <nav className='header__nav'>
-          <ul>
-            <li></li>
+          <ul className='nav__list'>
+            <li className='nav__item'>Головна</li>
+            <li className='nav__item active'>Каталог</li>
+            <li className='nav__item'>Жінкам</li>
+            <li className='nav__item'>Чоловікам</li>
+            <li className='nav__item'>дИТЯЧі речі</li>
+            <li className='nav__item'>Аукціон</li>
+            <li className='nav__item'>Бренди</li>
+            <li className='nav__item'>Акції</li>
+            <li className='nav__item'>Аутентифікація</li>
+            <li className='nav__item'>Блог</li>
           </ul>
         </nav>
       </div>
