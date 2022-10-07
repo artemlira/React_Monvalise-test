@@ -67,8 +67,8 @@
   background-size: 3%;
   background-position: left;
   padding: f.vw(10) f.vw(40);
-  border: 1.6px solid #E0E3E3;
-  border-radius: 4px;
+  border: f.vw(1.6) solid #E0E3E3;
+  border-radius: f.vw(4);
 
   @include m.tablet {
     width: f.vw(300);
@@ -82,7 +82,7 @@
   max-height: 38px;
   padding: f.vw(10) f.vw(20);
   background-color: #2D3132;
-  border-radius: 4px;
+  border-radius: f.vw(4);
   border: none;
   color: #fff;
   font-size: f.vw(12);
@@ -106,6 +106,16 @@
     line-height: 150%;
     color: #5C5F60;
     border: none;
+    appearance: none;
+  }
+
+  &::after {
+    width: f.vw(15);
+    height: f.vw(15);
+    content: '';
+    background-image: url(../images/main/s-bottom.svg);
+    background-position: center;
+    background-size: f.vw(15) f.vw(15);
   }
 
   & select:focus {
@@ -143,7 +153,7 @@
     position: absolute;
     top: f.vw(2);
     right: f.vw(11);
-    border: 2px solid rgba(0, 0, 0, 0);
+    border: f.vw(2) solid rgba(0, 0, 0, 0);
 
   }
 
@@ -202,10 +212,10 @@
   color: #444748;
 
   &:hover {
-    border-bottom: 2px solid #444748;
+    border-bottom: f.vw(2) solid #444748;
   }
 
   &.active {
-    border-bottom: 2px solid #444748;
+    border-bottom: f.vw(2) solid #444748;
   }
 }

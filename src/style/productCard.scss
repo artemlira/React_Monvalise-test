@@ -1,0 +1,163 @@
+@use 'variables.scss' as v;
+@use 'mixins.scss' as m;
+@use 'functions.scss' as f;
+
+.wrapper__card {
+  padding: f.vw(24);
+  border: 1px solid #EFF1F1;
+  border-radius: f.vw(4);
+  display: flex;
+  flex-direction: column;
+  gap: f.vw(16);
+
+  &:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.card__image {
+  position: relative;
+}
+
+.organic {
+  display: none;
+
+  &.active {
+    display: block;
+    position: absolute;
+    width: f.vw(56);
+    height: f.vw(23);
+    padding: f.vw(4) f.vw(8);
+    display: flex;
+    align-items: center;
+    background-color: #E0E3E3;
+    border-radius: f.vw(4);
+    font-size: f.vw(10);
+    line-height: 150%;
+    color: #2D3132;
+  }
+}
+
+.heart {
+  width: f.vw(20);
+  height: f.vw(16);
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.top {
+  display: none;
+
+  &.active {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: f.vw(38);
+    height: f.vw(23);
+    background-color: #B4FFF0;
+    border-radius: f.vw(4);
+    display: flex;
+    align-items: center;
+    padding: f.vw(4) f.vw(8);
+    font-size: f.vw(10);
+    line-height: 150%;
+    color: #00382F;
+    text-transform: uppercase;
+  }
+}
+
+.image {
+  margin: f.vw(21) f.vw(28);
+}
+
+.card__main {
+  display: flex;
+  flex-direction: column;
+  gap: f.vw(24);
+  justify-content: space-between;
+
+  &>div {
+    flex: 1 1 auto;
+  }
+}
+
+.card__brand {
+  font-weight: 500;
+  font-size: f.vw(10);
+  line-height: 150%;
+  text-transform: uppercase;
+  color: #5C5F60;
+}
+
+.card__title {
+  font-weight: 400;
+  font-size: f.vw(14);
+  line-height: 150%;
+  color: #2D3132;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price__old {
+  font-weight: 400;
+  font-size: f.vw(12);
+  line-height: 150%;
+  text-decoration-line: line-through;
+  color: #747778;
+}
+
+.price__now {
+  font-weight: 500;
+  font-size: f.vw(14);
+  line-height: 150%;
+  color: #2D3132;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  gap: f.vw(4);
+
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  p {
+    font-weight: 400;
+    font-size: f.vw(12);
+    line-height: 150%;
+    color: #2D3132;
+  }
+
+  img {
+    width: f.vw(9);
+    height: f.vw(11);
+  }
+}
+
+.brand {
+  img {
+    width: f.vw(20);
+    height: f.vw(20);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: f.vw(14);
+    line-height: 150%;
+    color: #2D3132;
+  }
+}

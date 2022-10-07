@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function Details({ title, text }) {
+export default function Details({ title, body, status }) {
   return (
-    <details>
+    <details open={status} >
       <summary>{title}</summary>
-      {text}
-    </details>
+      <div> {body}</div>
+    </details >
   )
 }

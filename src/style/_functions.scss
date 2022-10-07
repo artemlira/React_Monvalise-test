@@ -8,10 +8,10 @@
 
 //функция перевода в %
 @function pr($sizeBox , $size) {
-  @return $size/$sizeBox*100%;
+  @return calc($size / $sizeBox * 100%);
 }
 
 //функция перевода в vw, где числом указывается максимальный размер макета
 @function vw($value, $base: 1728) {
-  @return $value / $base * 100vw;
+  @return calc($value / $base * 100vw);
 }

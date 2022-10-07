@@ -50,6 +50,8 @@
   align-items: center;
   gap: f.vw(12);
   margin-bottom: f.vw(24);
+  position: relative;
+
 
   p {
     font-weight: 400;
@@ -59,10 +61,17 @@
   }
 
   select {
+    width: f.vw(170);
+    height: f.vw(34);
     background-color: #EFF1F1;
     padding: f.vw(8) f.vw(21) f.vw(8) f.vw(12);
     border: none;
     border-radius: f.vw(25) f.vw(25) f.vw(25) f.vw(25);
+    font-weight: 400;
+    font-size: f.vw(12);
+    line-height: 150%;
+    color: #2D3132;
+    appearance: none;
   }
 
   & select:focus {
@@ -74,19 +83,27 @@
     display: none;
   }
 
-  option {
-    color: #2D3132;
-  }
-
   &::after {
     content: '';
+    font-size: f.vw(12);
     display: block;
     width: f.vw(3);
     height: 122%;
     background-color: #fff;
     position: relative;
     top: 0;
-    right: f.vw(35);
+    right: f.vw(45);
+  }
+
+  &::before {
+    width: f.vw(15);
+    height: f.vw(15);
+    content: '';
+    background-image: url(../images/main/s-bottom.svg);
+    background-position: center;
+    background-size: f.vw(15) f.vw(15);
+    position: absolute;
+    right: f.vw(25);
   }
 }
 
@@ -96,12 +113,10 @@
   gap: f.vw(24);
 }
 
-.body__filters {
-  border: 1px solid red;
-}
-
 .body__products {
-  border: 1px solid green;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: f.vw(24);
 }
 
 details {
@@ -117,33 +132,43 @@ details {
     font-size: f.vw(14);
     line-height: 150%;
     color: #444748;
-    margin-top: f.vw(16);
+    margin: f.vw(16) 0 0 f.vw(24);
   }
 
-
-  img {
-    margin-top: 15px;
+  &>div {
+    margin-top: f.vw(10);
+    padding: f.vw(15);
+    background-color: #fff;
   }
 
   form {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    // align-items: flex-start;
     justify-content: flex-start;
-    gap: 15px;
+    gap: f.vw(15);
     background-color: #fff;
   }
 }
 
 details summary:after {
-  content: url(../images/main/s-bottom.svg);
+  display: block;
+  width: f.vw(20);
+  height: f.vw(20);
+  font-size: f.vw(14);
+  content: '';
+  background-image: url(../images/main/s-bottom.svg);
+  background-position: center;
+  background-size: f.vw(20) f.vw(20);
   position: absolute;
   right: f.vw(16);
 }
 
 details[open] summary:after {
-  content: url(../images/main/s-bottom.svg);
+  content: '';
+  background-image: url(../images/main/s-bottom.svg);
+  background-position: center;
+  background-size: f.vw(20) f.vw(20);
   position: absolute;
   right: f.vw(16);
   top: f.vw(7);
@@ -152,5 +177,5 @@ details[open] summary:after {
 
 
 details:not(:last-child) {
-  margin-bottom: 2px;
+  margin-bottom: f.vw(2);
 }
