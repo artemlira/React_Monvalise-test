@@ -1,0 +1,62 @@
+@use 'variables.scss' as v;
+@use 'mixins.scss' as m;
+@use 'functions.scss' as f;
+
+.footer {
+  background-color: #EFF1F1;
+  height: 457px;
+}
+
+.footer__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__links {
+  flex: 1 1 auto;
+
+}
+
+.links__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: f.vw(24);
+  margin: f.vw(72) 0;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: f.vw(12);
+}
+
+.footer__item {
+  list-style: none;
+  font-weight: 400;
+  font-size: f.vw(14);
+  line-height: 150%;
+  color: #2D3132;
+  cursor: pointer;
+
+  img {
+    width: f.vw(144);
+    height: f.vw(43);
+  }
+}
+
+.footer__logo {
+  height: 94px;
+  border-top: 1px solid #C4C7C7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  p {
+    font-weight: 400;
+    font-size: f.vw(12);
+    line-height: 150%;
+    color: #2D3132;
+  }
+}
