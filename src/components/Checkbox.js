@@ -6,7 +6,7 @@ export default function Checkbox({ text, amount }) {
     <div className='wrapper__checkbox'>
       <div class="checkbox">
         <label class="custom-checkbox">
-          <input type="checkbox" name="color-1" value={text} />
+          <input type="checkbox" value={text} />
           <span>{text}</span>
         </label>
       </div>

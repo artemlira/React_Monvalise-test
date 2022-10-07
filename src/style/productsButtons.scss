@@ -1,0 +1,22 @@
+@use 'variables.scss' as v;
+@use 'mixins.scss' as m;
+@use 'functions.scss' as f;
+
+.products__btn {
+  padding: f.vw(8) f.vw(13);
+  border-radius: f.vw(25) f.vw(25) f.vw(25) f.vw(25);
+  border: f.vw(1.6) solid #C4C7C7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: f.vw(12);
+  line-height: 150%;
+  color: #5C5F60;
+
+  &:hover {
+    border: f.vw(1.6) solid #2D3132;
+    color: #2D3132;
+    transform: scale(1.1);
+  }
+}

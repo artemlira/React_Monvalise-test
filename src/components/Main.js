@@ -4,6 +4,7 @@ import Details from './Details';
 import { main, mainProducts } from '../components/imagesDB.js';
 import ProductCard from './ProductCard';
 import Checkbox from './Checkbox';
+import ProductsButtons from './ProductsButtons';
 
 
 export default function Main() {
@@ -21,6 +22,16 @@ export default function Main() {
       body:
         <>
           <img src={main[0]} alt='' />
+          <div className='filters__price'>
+            <div className='filters__price__container'>
+              <p className='filters__price__text'>від</p>
+              <p className='price__range'>980</p>
+            </div>
+            <div className='filters__price__container'>
+              <p className='filters__price__text'>до</p>
+              <p className='price__range'>20465</p>
+            </div>
+          </div>
         </>,
       status: true
     },
@@ -230,6 +241,8 @@ export default function Main() {
     },
   ]
 
+  const productsButtons = ['Попередня', '1', '2', '3', '4', '5', '6', '7', '8', 'Наступна'];
+
   return (
     <div className='main'>
       <div className='container'>
@@ -264,8 +277,18 @@ export default function Main() {
             {productCard.map(item =>
               <ProductCard key={Math.random() * 10} {...item} />
             )}
+
           </div>
+
         </section>
+        <siction className="wrapper__buttons">
+          <div></div>
+          <div className='products__buttons'>
+            {productsButtons.map(item =>
+              <ProductsButtons key={Math.random() * 100} text={item} />
+            )}
+          </div>
+        </siction>
       </div>
     </div>
   )
