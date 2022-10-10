@@ -5,6 +5,7 @@ import { main, mainProducts } from '../components/imagesDB.js';
 import ProductCard from './ProductCard';
 import Checkbox from './Checkbox';
 import ProductsButtons from './ProductsButtons';
+import MultiRangeSlider from './MultiRangeSlider';
 
 
 export default function Main() {
@@ -20,19 +21,11 @@ export default function Main() {
     {
       title: 'Ціна',
       body:
-        <>
-          <img src={main[0]} alt='' />
-          <div className='filters__price'>
-            <div className='filters__price__container'>
-              <p className='filters__price__text'>від</p>
-              <p className='price__range'>980</p>
-            </div>
-            <div className='filters__price__container'>
-              <p className='filters__price__text'>до</p>
-              <p className='price__range'>20465</p>
-            </div>
-          </div>
-        </>,
+        <MultiRangeSlider
+          min={900}
+          max={40000}
+          onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
+        />,
       status: true
     },
     {

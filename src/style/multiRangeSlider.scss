@@ -1,0 +1,111 @@
+@use 'variables.scss' as v;
+@use 'mixins.scss' as m;
+@use 'functions.scss' as f;
+
+.container__multiSlider {
+  margin-top: f.vw(12);
+}
+
+.slider {
+  position: relative;
+  width: f.vw(250);
+}
+
+.slider__track,
+.slider__range {
+  height: f.vw(4);
+}
+
+.slider__track {
+  background-color: #C4C7C7;
+  width: f.vw(250);
+  z-index: 1;
+}
+
+.slider__range {
+  position: relative;
+  bottom: f.vw(3);
+  background-color: #8E9192;
+  z-index: 2;
+}
+
+.filters__price {
+  display: flex;
+  gap: f.vw(24);
+  margin-top: f.vw(30);
+}
+
+.filters__price__container {
+  width: f.vw(120);
+  height: f.vw(45);
+  border-bottom: f.vw(1) solid #C4C7C7;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.price__range {
+  font-weight: 400;
+  font-size: f.vw(12);
+  line-height: 150%;
+  color: #2D3132;
+}
+
+.filters__price__text {
+  position: absolute;
+  top: f.vw(-12);
+  left: 0;
+  font-weight: 400;
+  font-size: f.vw(10);
+  line-height: 150%;
+  color: #747778;
+}
+
+// /* Removing the default appearance */
+.thumb,
+.thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.thumb {
+  pointer-events: none;
+  position: absolute;
+  height: 0;
+  width: f.vw(250);
+  outline: none;
+}
+
+.thumb--left {
+  z-index: 3;
+}
+
+.thumb--right {
+  z-index: 4;
+}
+
+/* For Chrome browsers */
+.thumb::-webkit-slider-thumb {
+  background-color: #5C5F60;
+  border: none;
+  border-radius: f.vw(4);
+  cursor: pointer;
+  height: f.vw(16);
+  width: f.vw(16);
+  margin-top: f.vw(4);
+  pointer-events: all;
+  position: relative;
+}
+
+/* For Firefox browsers */
+.thumb::-moz-range-thumb {
+  background-color: #5C5F60;
+  border: none;
+  border-radius: f.vw(4);
+  cursor: pointer;
+  height: f.vw(16);
+  width: f.vw(16);
+  margin-top: f.vw(4);
+  pointer-events: all;
+  position: relative;
+}

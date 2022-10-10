@@ -181,38 +181,6 @@ details:not(:last-child) {
   margin-bottom: f.vw(2);
 }
 
-.filters__price {
-  display: flex;
-  gap: f.vw(24);
-  margin-top: f.vw(30);
-}
-
-.filters__price__container {
-  width: f.vw(120);
-  height: f.vw(45);
-  border-bottom: f.vw(1) solid #C4C7C7;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.price__range {
-  font-weight: 400;
-  font-size: f.vw(12);
-  line-height: 150%;
-  color: #2D3132;
-}
-
-.filters__price__text {
-  position: absolute;
-  top: f.vw(-12);
-  left: 0;
-  font-weight: 400;
-  font-size: f.vw(10);
-  line-height: 150%;
-  color: #747778;
-}
-
 .products__buttons {
   display: flex;
   justify-content: center;
