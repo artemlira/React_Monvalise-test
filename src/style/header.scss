@@ -157,7 +157,6 @@
 
   }
 
-
   img {
     width: 55%;
   }
@@ -203,7 +202,6 @@
 .nav__item {
   list-style: none;
   text-transform: uppercase;
-  // padding: f.vw(16);
   font-weight: 500;
   font-size: f.vw(13);
   line-height: 150%;
@@ -216,20 +214,12 @@
     color: #444748;
     padding: f.vw(16);
   }
-
-  // &:hover {
-  //   border-bottom: f.vw(2) solid #444748;
-  // }
-
-  // &.active {
-  //   border-bottom: f.vw(2) solid #444748;
-  // }
 }
 
 a.active {
-  border-bottom: f.vw(2) solid #444748;
+  border-bottom: f.vw(2) solid #444748 !important;
 }
 
 a:hover {
-  border-bottom: f.vw(2) solid #444748;
+  border-bottom: f.vw(2) solid #E0E3E3;
 }
