@@ -203,7 +203,7 @@
 .nav__item {
   list-style: none;
   text-transform: uppercase;
-  padding: f.vw(16);
+  // padding: f.vw(16);
   font-weight: 500;
   font-size: f.vw(13);
   line-height: 150%;
@@ -211,11 +211,25 @@
   letter-spacing: 0.4px;
   color: #444748;
 
-  &:hover {
-    border-bottom: f.vw(2) solid #444748;
+  & a {
+    text-decoration: none;
+    color: #444748;
+    padding: f.vw(16);
   }
 
-  &.active {
-    border-bottom: f.vw(2) solid #444748;
-  }
+  // &:hover {
+  //   border-bottom: f.vw(2) solid #444748;
+  // }
+
+  // &.active {
+  //   border-bottom: f.vw(2) solid #444748;
+  // }
+}
+
+a.active {
+  border-bottom: f.vw(2) solid #444748;
+}
+
+a:hover {
+  border-bottom: f.vw(2) solid #444748;
 }

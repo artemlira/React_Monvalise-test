@@ -1,6 +1,7 @@
 import React from 'react';
 import { header } from './imagesDB';
 import '../style/header.scss';
+import { NavLink } from 'react-router-dom';
 
 
 export default function Header() {
@@ -55,16 +56,36 @@ export default function Header() {
         </div>
         <nav className='header__nav'>
           <ul className='nav__list'>
-            <li className='nav__item'>Головна</li>
-            <li className='nav__item active'>Каталог</li>
-            <li className='nav__item'>Жінкам</li>
-            <li className='nav__item'>Чоловікам</li>
-            <li className='nav__item'>дИТЯЧі речі</li>
-            <li className='nav__item'>Аукціон</li>
-            <li className='nav__item'>Бренди</li>
-            <li className='nav__item'>Акції</li>
-            <li className='nav__item'>Аутентифікація</li>
-            <li className='nav__item'>Блог</li>
+            <li className='nav__item'>
+              <NavLink to='/' end>Головна</NavLink>
+            </li>
+            <li className='nav__item'>
+              <NavLink to="/catalog">Каталог</NavLink>
+            </li>
+            <li className='nav__item'>
+              <NavLink to="/women">Жінкам</NavLink>
+            </li>
+            <li className='nav__item'>
+              <NavLink to="/men">Чоловікам</NavLink>
+            </li>
+            <li className='nav__item'>
+              <NavLink to="/childrens">дИТЯЧі речі</NavLink>
+            </li>
+            <li className='nav__item'>
+              <NavLink to="/auction">Аукціон</NavLink>
+            </li>
+            <li className='nav__item'>
+              <NavLink to="/brands">Бренди</NavLink>
+            </li>
+            <li className='nav__item'>
+              <NavLink to="/shares">Акції</NavLink>
+            </li>
+            <li className='nav__item'>
+              <NavLink to="/authentication">Аутентифікація</NavLink>
+            </li>
+            <li className='nav__item'>
+              <NavLink to="/blog">Блог</NavLink>
+            </li>
           </ul>
         </nav>
       </div>
